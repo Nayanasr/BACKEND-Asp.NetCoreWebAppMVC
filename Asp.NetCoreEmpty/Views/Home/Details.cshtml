@@ -1,0 +1,108 @@
+﻿@*@model Asp.NetCoreEmpty.ViewModels.HomeDetailsViewModel
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+
+    <body>
+        <h1>@Model.Title</h1>
+
+        <h3>Name:@Model.employee.name </h3>
+        <h3>Email:@Model.employee.email</h3>
+        <h3>Age:@Model.employee.age</h3>
+        <h3>Id:@Model.employee.id</h3>
+    </body>
+    </html>*@
+
+
+
+@*@{
+    @model Asp.NetCoreEmpty.ViewModels.HomeDetailsViewModel*@
+
+@*@model Asp.NetCoreEmpty.Modal.Employee;*@
+@*Layout = "~/Views/Shared/_Layout.cshtml";
+        <h1> @Model.Title</h1>
+        <h1> @ViewBag.Title </h1>
+        var employee = ViewData["Employee"] as Asp.NetCoreEmpty.Modal.Employee;
+    }*@
+@*<div class="text-center">
+
+
+        <h3> Age: @Model.employee.age</h3>
+        <h3> Id: @Model.employee.id</h3>
+        <h3> Name: @Model.employee.name</h3>
+        <h3>Email:@Model.employee.email</h3>
+
+    </div>*@
+
+@model Asp.NetCoreEmpty.ViewModels.HomeDetailsViewModel;
+<h1>@Model.Title</h1>
+<div class="card-group">
+
+
+
+    <div class="card">
+        <img class="card-img-top" src="~/images/picture.jpg" />
+        <div class="card-body">
+            <h5 class="card-title">Employee Details</h5>
+            <h5> Age: @Model.employee.age</h5>
+            <h5> Id: @Model.employee.id</h5>
+            <h5> Name: @Model.employee.name</h5>
+            <h5> Email: @Model.employee.email</h5>
+
+        </div>
+
+        <div class="card-footer">
+            <button class="btn btn-success"> VIEW</button>
+            <button class="btn btn-primary">UPDATE </button>
+            <button class="btn btn-danger"> DELETE</button>
+            <button class="btn btn-dark"> DONE</button>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <img class="card-img-top" src="~/images/picture.jpg" />
+        <div class="card-body">
+            <h5 class="card-title">Employee Details</h5>
+
+            <h5> Name: @Model.employee.name</h5>
+            <h5> Age: @Model.employee.age</h5>
+            <h5> Id: @Model.employee.id</h5>
+            <h5> Email: @Model.employee.email</h5>
+
+        </div>
+
+        <div class="card-footer">
+            <button class="btn btn-success"> VIEW</button>
+            <button class="btn btn-primary">UPDATE </button>
+            <button class="btn btn-danger"> DELETE</button>
+            <button class="btn btn-dark"> DONE</button>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <img class="card-img-top" src="~/images/picture.jpg" />
+        <div class="card-body">
+            <h5 class="card-title">Employee Details</h5>
+            <h5> Id: @Model.employee.id</h5>
+            <h5> Name: @Model.employee.name</h5>
+            <h5> Age: @Model.employee.age</h5>
+            <h5> Email: @Model.employee.email</h5>
+
+
+        </div>
+
+        <div class="card-footer">
+            <button class="btn btn-success"> VIEW</button>
+            <button class="btn btn-primary">UPDATE </button>
+            <button class="btn btn-danger"> DELETE</button>
+            <button class="btn btn-dark"> DONE</button>
+        </div>
+    </div>
+</div>
